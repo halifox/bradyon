@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-space-black: #050505;
+  --color-neon-cyan: #00f3ff;
+  --color-neon-magenta: #ff00ff;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-pulse-fast: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+:root {
+  font-family: var(--font-sans);
+  background-color: var(--color-space-black);
+  color: white;
+  overflow: hidden; /* Prevent scrolling for the full-screen effect */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Custom scrollbar hide */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Utilities for glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
