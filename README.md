@@ -1,4 +1,4 @@
-# 🐢 Bradyon
+# ![](packages/frontend/public/icon.svg) Bradyon
 
 ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-orange?logo=cloudflare)
 ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Page-orange?logo=cloudflare)
