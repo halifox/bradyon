@@ -114,10 +114,10 @@ export const ResultStage: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="flex gap-6 w-full justify-center relative z-10">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full justify-center relative z-10">
                     <button
                         onClick={handleCopy}
-                        className="group relative px-8 py-4 rounded-lg bg-white/5 border border-white/10 overflow-hidden transition-all active:scale-95 flex items-center gap-2"
+                        className="group relative px-8 py-4 rounded-lg bg-white/5 border border-white/10 overflow-hidden transition-all active:scale-95 flex items-center justify-center gap-2 w-full sm:w-auto"
                     >
                         <div
                             className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out"/>
@@ -130,7 +130,7 @@ export const ResultStage: React.FC = () => {
 
                     <button
                         onClick={reset}
-                        className="px-8 py-4 rounded-lg bg-transparent border border-white/10 hover:border-white/30 text-gray-400 hover:text-white transition-all flex items-center gap-2 active:scale-95"
+                        className="px-8 py-4 rounded-lg bg-transparent border border-white/10 hover:border-white/30 text-gray-400 hover:text-white transition-all flex items-center justify-center gap-2 active:scale-95 w-full sm:w-auto"
                     >
                         <RotateCcw className="w-5 h-5"/>
                         <span className="text-sm font-bold tracking-wide">NEW TRANSMISSION</span>
