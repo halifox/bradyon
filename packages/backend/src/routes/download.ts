@@ -5,6 +5,14 @@ const app = new Hono<{ Bindings: Bindings }>()
 
 app.get('/:key', async (c) => {
     const {key} = c.req.param()
+
+    // Anti-hotlink: Prevent usage as media source for other websites
+    const dest = c.req.header('sec-fetch-dest')
+    const site = c.req.header('sec-fetch-site')
+    if (site !== 'same-origin' && dest && ['image', 'video', 'audio', 'object', 'embed', 'iframe'].includes(dest)) {
+        return c.text('Hotlinking denied', 403)
+    }
+
     const range = c.req.header('range')
     const object = await c.env.r2_buckets.get(key, {
         range: c.req.raw.headers,
